@@ -1,0 +1,71 @@
+/* Add or modify styles in your external CSS file (resume.css) */
+.myimg {
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.background {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.ab {
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 15px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #382e2e;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Additional styling for specific elements */
+
+
+#cv-form h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#cv-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+#cv-template h1 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: #2e7d32;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #2e7d32;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Builder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0lXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+
+    <div class="header" style=" background-image: url('https://th.bing.com/th/id/OIP.0dY6yZsJJvoep9NJMpCIXQHaBV?w=449&h=63&c=7&r=0&o=5&dpr=1.3&pid=1.7');opacity: 0.8; height: 66px; padding-top: 1px;">
+    </div>
+    <hr/>
+    
+    <div class="container" id="cv-form" style="padding-left: 15%;  padding-right: 15%; background-image: url('data:image/jpeg;base64,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'); opacity: 1.3;">
+        <div class="row">
+            <h1 class="text-center display-3" style="text-align: center;font-family: sans-serif; font-style: italic; font-size: 30px; color: rgb(255, 0, 0);">Online CV Builder</h1>
+   
+            <div class="col-md-6 mt-5">
+                <h3>Personal Information</h3>
+                <div class="form-group" style="font-family: sans-serif;font-size: medium; ">
+                    <label for="nameField" style="color: blue;"> Name</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="nameField"
+                            placeholder="Enter here"
+                            class="form-control"
+                        />
+                    </div>
+                </div>
+                <div class="form-group mt-2" style="font-family: sans-serif;font-size: medium;">
+                    <label for="contactField" style="color: blue;"> Contact Number</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="contactField"
+                            placeholder="Enter here"
+                            class="form-control"
+                        />
+                    </div>
+                </div>
+                <div class="form-group mt-2" style="font-family: sans-serif;font-size: medium;">
+                    <label for="addressField" style="color: blue;"> Address</label>
+                    <div class="input-wrapper">
+                        <textarea
+                            id="addressField"
+                            placeholder="Enter here"
+                            class="form-control"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group" style="font-family: sans-serif;font-size: medium;">
+                    <label for="" style="color: blue;">Profile photo</label>
+                    <div class="input-wrapper">
+                        <input type="file" id="imgField" class="form-control">
+                    </div>
+                </div>
+
+                <h3><p class="text-secondary my-3">Important Links</p></h3>
+                <div class="form-group mt-2" style="font-family: sans-serif;font-size: medium;">
+                    <label for="fbField" style="color: blue;">Facebook</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="fbField"
+                            placeholder="Enter here"
+                            class="form-control"
+                        />
+                    </div>
+                </div>
+                <div class="form-group mt-2" style="font-family: sans-serif;font-size: medium;">
+                    <label for="gtField" style="color: blue;">Github</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="gtField"
+                            placeholder="Enter here"
+                            class="form-control"
+                        />
+                    </div>
+                </div>
+                <div class="form-group mt-2" style="font-family: sans-serif;font-size: medium;">
+                    <label for="lkField" style="color: blue;">Linkedin</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="lkField"
+                            placeholder="Enter here"
+                            class="form-control"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mt-5">
+                <h3>Professional Information</h3>
+
+                <div class="form-group mt-2" style="font-family: sans-serif;font-size: medium;">
+                    <label for="" style="color: blue;">Projects</label>
+                    <div class="input-wrapper">
+                        <textarea
+                            id="objectiveField"
+                            placeholder="Enter here"
+                            class="form-control"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" style="font-family: sans-serif;font-size: medium;" id="we">
+                    <label for="" style="color: blue;">Skill</label>
+                    <div class="input-wrapper">
+                        <textarea
+                            placeholder="Enter here"
+                            class="form-control weField"
+                        ></textarea>
+                    </div>
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWe()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <!-- Academic Qualification  -->
+                <div class="form-group mt-2" id="aq" style="font-family: sans-serif;font-size: medium;">
+                    <label for="aqField" style="color: blue;">Academic Qualification</label>
+                    <div class="input-wrapper">
+                        <textarea
+                            placeholder="Enter here"
+                            class="form-control aqField"
+                        ></textarea>
+                    </div>
+
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAq()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <!-- Hobbies -->
+                <div class="form-group mt-2" id="ec" style="font-family: sans-serif;font-size: medium;">
+                    <label for="aqField" style="color: blue;">Extra Curricular Activities</label>
+                    <div class="input-wrapper">
+                        <textarea
+                            placeholder="Enter here"
+                            class="form-control ecField"
+                        ></textarea>
+                    </div>
+
+                    <div class="container text-center mt-2" id="ecAddButton">
+                        <button onclick="addNewec()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="container text-center mt-3 " style="text-align: center;">
+        <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+    </div>
+<br>
+    <!-- CV template -->
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <img
+                    src="https://media.istockphoto.com/id/476085198/photo/businessman-silhouette-as-avatar-or-default-profile-picture.jpg?s=170667a&w=0&k=20&c=pbUvoKhdnGQ8IdDFqHYRm-m5zf51Ta6QUHERf9EU5FU="
+                    alt=""
+                    class="img-fluid myimg"
+                    id="imgT"
+                />
+                <div class="container">
+                    <p id="nameT"></p>
+                    <p id="contactT"></p>
+                    <p id="addressT"></p>
+                    <hr>
+                    <p><a id="fbT" href=""></a></p>
+                    <p><a id="gtT" href=""></a></p>
+                    <p><a id="lkT" href=""></a></p>
+                </div>
+            </div>
+
+            <div class="col-md-8 py-5">
+                <h1 id="nameT2" class="text-center" style="font-weight: 980"></h1>
+
+                <!-- Objective card -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Projects</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT"></p>
+                    </div>
+                </div>
+
+                <!-- Work experience -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Skill</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT"></ul>
+                    </div>
+                </div>
+
+                <!-- Academic qualification -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class "card-body">
+                        <ul id="aqT"></ul>
+                    </div>
+                </div>
+
+                <!-- Extra curricular activities -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Extra Curricular Activities</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="ecT"></ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background">Print CV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="resume.js"></script>
+</body>
+</html>
